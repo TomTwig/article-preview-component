@@ -16,8 +16,7 @@
 }
 
 img{
- width: 100%;
- height: auto
+
 }
 
 
@@ -35,23 +34,25 @@ body{
     width: 800px;
     display: flex;
     background-color:white;
-    align-items: center;
     border-radius: .5em;
     box-shadow: 10px 10px 15px 15px rgba(0, 0, 0, .02) ;
 }
 
 .card__picture{
     flex: 1;
+    object-fit: cover;
+    height: fit-content;
 }
 
 .card__picture img{
     border-radius:.5em 0 0 .5em;
-
+    width: 100%;
 }
 
 .card__content{
 display: flex;
 flex-direction: column;
+align-content: space-between;
 padding: 2em;
 flex: 1;
 
@@ -60,22 +61,39 @@ flex: 1;
 .card__content__info{
     display: flex;
     flex-direction: column;
+    flex: 1;
     gap: 1em;
 }
 
 .card__content__info h1{
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 .card__content__info p{
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-grayishBlue);
 }
 
 .card__content__profile{
     display: flex;
     gap: 1em;
     align-items: center;
-
+    flex: 1;
 }
+
+.card__content__profile p:first-of-type{
+font-weight: bold;
+}
+
+.card__content__profile p:last-of-type{
+    color: var(--color-grayishBlue);
+    }
+
+
+
+
+
 .card__content__profile__container{
     display: flex;
     align-items: center;
