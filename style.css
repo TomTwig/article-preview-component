@@ -111,9 +111,37 @@ font-weight: bold;
 
 }
 
+
+.link{
+    position: relative;
+
+}
+
 .arrow{
     background-color: var(--color-lightGrayishBlue);
     border-radius: 50%;
     padding: .5em .5em;
+}
+
+i{
+    color: white;
+}
+
+i:active{
+    color: var(--color-lightGrayishBlue)
+}
+.social-menu{
+    color: var(--color-grayishBlue);
+    border-radius: 10px;
     display: flex;
+    gap: 1em;
+    padding: 1em;
+    position: absolute;
+    top: -5em;
+    right: -5em;
+    width: fit-content;
+    display: none;
+    
+    background-color: var(--color-desaturatedDarkBlue);
+
 }
