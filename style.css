@@ -42,7 +42,6 @@ body{
 
 .card__picture{
     flex: 1;
-
 }
 
 
@@ -59,7 +58,6 @@ flex-direction: column;
 align-content: space-between;
 padding: 2em;
 flex: 1.2;
-
 }
 
 .card__content__info{
@@ -73,6 +71,7 @@ flex: 1.2;
     font-size: 1.3rem;
     font-weight: 700;
 }
+
 .card__content__info p{
     font-size: 13px;
     font-weight: 700;
@@ -96,9 +95,6 @@ font-weight: bold;
     }
 
 
-
-
-
 .card__content__profile__container{
     display: flex;
     align-items: center;
@@ -108,13 +104,11 @@ font-weight: bold;
 .card__content__profile img{
     width: 50px;
     border-radius: 50%;
-
 }
 
 
 .link{
     position: relative;
-
 }
 
 .arrow{
@@ -141,7 +135,28 @@ i:active{
     right: -5em;
     width: fit-content;
     display: none;
-    
     background-color: var(--color-desaturatedDarkBlue);
+}
 
+
+@media only screen and (max-width: 600px)  {
+
+    body{
+        padding: 1em;
+        height: 100%;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+
+    .card__picture img{
+        border-radius:.5em .5em 0 0;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0;
+    }
+
+
+    
 }
