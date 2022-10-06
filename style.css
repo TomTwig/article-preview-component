@@ -100,6 +100,7 @@ font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
+   
 
 }
 .card__content__profile img:first-of-type{
@@ -110,6 +111,24 @@ font-weight: bold;
 
 .link{
     position: relative;
+    
+}
+.link-mobile{
+display: none;
+justify-content: space-between;
+align-items: center;
+gap: 1em;
+background-color: var(--color-desaturatedDarkBlue);
+width: 100%;
+padding: 1em;
+margin: 0;
+color: white;
+
+}
+.arrow-mobile{
+    background-color: var(--color-lightGrayishBlue);
+    border-radius: 50%;
+    padding: .3em;
 }
 
 .arrow{
@@ -128,7 +147,6 @@ i:active{
 .social-menu{
     color: var(--color-grayishBlue);
     border-radius: 10px;
-    display: flex;
     gap: 1em;
     padding: 1em;
     position: absolute;
@@ -140,7 +158,15 @@ i:active{
 }
 
 
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 768px)  {
+
+
+    .card__content__profile__container{
+   
+        justify-content: space-around;
+       
+    
+    }
 
     body{
         padding: 1em;
@@ -167,7 +193,6 @@ i:active{
     }
 
     .card__content__profile__container{
-        gap: 2em;
     }
 
     .card__picture img{

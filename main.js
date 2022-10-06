@@ -1,61 +1,63 @@
 const arrowButton = document.getElementById("arrow");
+const arrowButtonMobile = document.getElementById("arrow-mobile");
 const socialMenu = document.getElementById("social-menu");
 const profile = document.getElementById("card__content__profile");
 const profileContainer = document.getElementById("card__content__profile__container");
 const link = document.getElementById("link");
+const linkMobile= document.getElementById("link-mobile");
 
-let isShowSocialMenu = false;
+let showSocialMenu =false;
+
+arrowButton.addEventListener("click",()=>{
+
+if( window.matchMedia('(max-width: 768px)').matches){
 
 
-
-
-arrowButton.addEventListener("click",() => {
-
-
-if(window.innerWidth >= 600){
-
-    link.firstChild = arrowButton;
-    if(isShowSocialMenu){
-        isShowSocialMenu = false;
-        socialMenu.style.display ="none";
+    if(!showSocialMenu){
+        profile.style.display = "none";
+        arrowButton.style.display = "none";
+    linkMobile.style.display ="flex";
+    showSocialMenu = true;
+    
     }else{
-        isShowSocialMenu = true;
-        socialMenu.style.display = "flex";
+        profile.style.display = "block";
+        linkMobile.style.display ="none";
+        showSocialMenu = false;
+
     }
+
+  
+
+
 }else{
 
-    if(isShowSocialMenu){
-        isShowSocialMenu = false;
-        
-        
-        socialMenu.style.display ="none";
-        profileContainer.style.display ="flex";
-        profile.appendChild(arrowButton);
-        profile.style.justifyContent="center";
-        profile.style.display ="flex";
-    
-
-    }else{
+    if(!showSocialMenu){
         socialMenu.style.display = "flex";
-        socialMenu.appendChild(arrowButton);
-        profile.style.display ="none";
-        profileContainer.style.display ="block";
-        isShowSocialMenu = true;
-    }
+        showSocialMenu = true;
+    }else{
+        socialMenu.style.display = "none";
+        showSocialMenu = false;
 
-    
+    }
 
 
 }
 
 
-   
-    })
-
- 
-
-   
 
 
 
+})
 
+
+arrowButtonMobile.addEventListener("click",()=>{
+
+
+    profile.style.display = "block";
+    linkMobile.style.display ="none";
+
+    arrowButton.style.display = "block";
+    showSocialMenu = false;
+
+
+})
